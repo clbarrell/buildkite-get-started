@@ -4,7 +4,7 @@ steps:
 
   - label: ":hammer: Build the rocket #%n"
     command: build/build.sh
-    parallelism: 5
+    parallelism: 2
 
   - label: ":clipboard: Test the rocket"
     command: test/test.sh
