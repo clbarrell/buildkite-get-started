@@ -1,0 +1,12 @@
+steps:
+  - label: ":wave: Hello world"
+    command: echo "Hello world!"
+
+  - label: ":hammer: Build the rocket"
+    command: build/build.sh
+
+  - label: ":clipboard: Test the rocket"
+    command: test/test.sh
+
+  - label: ":rocket: Deploy the rocket"
+    command: deploy/deploy.sh
