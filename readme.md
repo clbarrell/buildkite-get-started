@@ -2,15 +2,13 @@
 
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new?welcome)
 
-This repository is an example on how to test a [Ruby](https://www.ruby-lang.org/en/) project using [Buildkite](https://buildkite.com/) and [rbenv](https://github.com/rbenv/rbenv). 
+This is an example repository that we're prepared for new users to quickly get a sense of how [Buildkite](https://buildkite.com/) pipelines work.
 
 ## How does it work?
 
+You create a new pipeline in Buildkite using this repository and the first step will run the pipeline inside this repo in [.buildkite/pipeline.yml](.buildkite.com/pipeline.yml)
 
-
-It uses a local agent environment hook in [.buildkite/hooks/pre-command](.buildkite/hooks/pre-command) to setup rbenv.
-
-See the [agent hook documentation](https://buildkite.com/docs/agent/hooks) for more information on how agent hooks work.
+We've defined three sample tests to build, test and deploy a shiny new rocket to get you to the moon.
 
 ## License
 
