@@ -8,4 +8,4 @@ cat ./deploy/rocket.txt
 echo -e "\033[0m"
 
 # Annotate
-buildkite-agent annotate 'Rocket is deployed! Let's go to the  🌒! \(This is an annotation from `/deploy/deploy.sh`\)' --style 'success'
+buildkite-agent annotate 'Rocket is deployed! Let's go to the  🌒! \(This is an annotation from \`/deploy/deploy.sh\`\)' --style 'success'
