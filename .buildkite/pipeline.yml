@@ -2,8 +2,9 @@ steps:
   - label: ":wave: Hello world"
     command: echo "Hello world!"
 
-  - label: ":hammer: Build the rocket"
+  - label: ":hammer: Build the rocket #%n"
     command: build/build.sh
+    parallelism: 5
 
   - label: ":clipboard: Test the rocket"
     command: test/test.sh
