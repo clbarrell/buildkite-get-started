@@ -9,5 +9,13 @@ steps:
   - label: ":clipboard: Test the rocket"
     command: test/test.sh
 
+  - block: ":rocket: Are we ready?"
+
   - label: ":rocket: Deploy the rocket"
     command: deploy/deploy.sh
+
+  - block: "Release"
+    prompt: "Fill out the details for release"
+    fields:
+      - text: "Release Name"
+        key: "release-name"
