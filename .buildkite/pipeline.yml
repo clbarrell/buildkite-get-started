@@ -1,16 +1,16 @@
 steps:
   - label: ":package: Install rocket dependencies"
-    command: "install.sh"
+    command: "scripts/install.sh"
 
   - label: ":construction_worker: Build the rocket"
-    command: "build.sh"
+    command: "scripts/build.sh"
 
   - group: "QA the rocket"
     steps:
     - label: ":rotating_light: Lint launch sequence"
-      command: "lint.sh"
+      command: "scripts/lint.sh"
     - label: ":white_check_mark: Test the rocket"
-      command: "test.sh"
+      command: "scripts/test.sh"
 
   - label: ":rocket: Deploy the rocket"
-    command: "deploy.sh"
+    command: "scripts/deploy.sh"
