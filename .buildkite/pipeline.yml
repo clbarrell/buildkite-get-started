@@ -1,10 +1,12 @@
 steps:
-  - label: ":wave: Hello world"
-    command: echo "Hello world!"
-
-  - label: ":hammer: Build the rocket #%n"
-    command: build/build.sh
-    parallelism: 2
+  - group: ":hammer: Build the rocket"
+    steps:
+      - label: ":rocket: :windows: Compile the engine"
+        command: build/build.sh "WINDOWS"
+      - label: ":rocket: :linux: Insert the fuel"
+        command: build/build.sh "LINUX"
+      - label: ":rocket: :mac: Simulate launch"
+        command: build/build.sh "MAC"
 
   - label: ":clipboard: Test the rocket"
     command: test/test.sh
