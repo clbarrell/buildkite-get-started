@@ -1,15 +1,16 @@
 steps:
-  - group: ":hammer: Build the rocket"
-    steps:
-      - label: ":rocket: :windows: Compile the engine"
-        command: build/build.sh "WINDOWS"
-      - label: ":rocket: :linux: Insert the fuel"
-        command: build/build.sh "LINUX"
-      - label: ":rocket: :mac: Simulate launch"
-        command: build/build.sh "MAC"
+  - label: ":package: Install rocket dependencies"
+    command: "install.sh"
 
-  - label: ":clipboard: Test the rocket"
-    command: test/test.sh
+  - label: ":construction_worker: Build the rocket"
+    command: "build.sh"
+
+  - group: "QA the rocket"
+    steps:
+    - label: ":rotating_light: Lint launch sequence"
+      command: "lint.sh"
+    - label: ":white_check_mark: Test the rocket"
+      command: "test.sh"
 
   - label: ":rocket: Deploy the rocket"
-    command: deploy/deploy.sh
+    command: "deploy.sh"
